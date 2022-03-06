@@ -89,7 +89,7 @@ body {
     display: flex;
     position: absolute;
     margin: 0.8% 0 0 20%;
-    width: 550px;
+    width: 650px;
 
 }
 
@@ -123,7 +123,7 @@ body {
 }
 
 .GoAdFreeBtn {
-    margin-left: 48%;
+    margin-left: 58%;
     padding: 10px;
     padding-top: 12px;
     margin-top: 1%;
@@ -278,3 +278,65 @@ body {
   .me{
     background-color: #ba519f
   }
+
+
+
+  #productDiv {
+    border: 1px solid greenyellow;
+    width: 90%;
+
+    margin-left: 2%;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 2px;
+}
+
+.imgCard {
+    margin: auto;
+    margin-left: 6%;
+    width: 95%;
+
+    /* border: 1px solid blue; 8*/
+}
+
+.picIcon {
+    width: 94%;
+    margin: 1% 3% 0% 3%;
+    border-radius: 0.2rem 0.2rem 0 0;
+}
+
+.picTitle {
+    width: 94%;
+    height: 80px;
+    margin: -7% 3% 1% 3%;
+    background-color: grey;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+
+}
+
+.ps {
+    margin: 5% 3% 1% 3%;
+    padding-top: 10px;
+}
+
+.foundRes {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20%;
+    width: 650px;
+    height: 80px;
+
+    cursor: pointer;
+    font-size: medium;
+    background-color: grey;
+    color: white;
+    position: absolute;
+    z-index: 200;
+
+}
+
+.foundRes>p {
+    padding-top: 4px;
+    margin-left: 5px;
+}

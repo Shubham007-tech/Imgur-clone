@@ -1,14 +1,10 @@
- // CXNvAdtWc35hFJrALEUAgBUT6kiM1LqS
+  let key = "CXNvAdtWc35hFJrALEUAgBUT6kiM1LqS"
 
-
-
-
-   
 
  function getProductData() {
 
     try {
-        fetch(`https://api.giphy.com/v1/gifs/trending?api_key=CXNvAdtWc35hFJrALEUAgBUT6kiM1LqS&offset=1&limit=20`)
+        fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${key}&offset=1&limit=20`)
             .then((e) => e.json())
             .then((res) => {
                 console.log("mydata", res.data);
@@ -60,22 +56,87 @@ function viewProducts(datas) {
 }
 
 
-/*
-let inputData =  document.getElementById("takeinput");
+
+//----------------------------------------------------------------------------- search debouncing
+
+
+
+let inputData = document.getElementById("takeinput");
 let dropDown = document.getElementById("searchresult");
 let timerId;
 
 
-searchInput.oninput = () => {
-deBounce(showData, 1000);
+inputData.oninput = () => {
+    let res = inputData.value;
+    deBounce(findResult(res), 2000);
 };
 
-function deBounce(func, delay){
-if(timerId){
-clearTimeout(timerId);
+
+
+function findResult(q) {
+    try {
+        fetch(`https://api.giphy.com/v1/gifs/search?q=${q}&api_key=${key}&limit=3`)
+            .then((e) => e.json())
+            .then((res) => {
+                dropdownResult(res.data);
+            })
+    }
+    catch (e) {
+        console.log(e.message);
+    }
 }
-timerId = setTimeout(function(){
-func();
-}, delay);
+
+
+
+
+function dropdownResult(data) {
+    dropDown.innerHTML = null;
+
+    data.forEach((res) => {
+        let foundRes = document.createElement("div");
+        foundRes.setAttribute("class", "foundRes");
+
+        let foundTitle = document.createElement("p");
+        foundTitle.textContent = res.title;
+
+
+        foundRes.onclick = () => {
+            dropDown.innerHTML = null;
+            let query = inputData.value;
+            showResultData(query);
+        }
+        foundRes.append(foundTitle);
+       
+        dropDown.append(foundRes);
+    });
 }
-*/
+
+
+
+function showResultData(q) {
+    try {
+         fetch(`https://api.giphy.com/v1/gifs/search?q=${q}&api_key=${key}&limit=20`)
+            .then((e) =>
+             e.json())
+            .then((res) => {
+                inputData.value = "";
+                console.log("searchdata" , res.data)
+                viewProducts(res.data);
+            })
+    }
+    catch (e) {
+        console.log(e.message);
+    }
+}
+
+
+
+function deBounce(func, delay) {
+    if (timerId) {
+        clearTimeout(timerId);
+    }
+    timerId = setTimeout(function () {
+        func();
+    }, delay);
+}
+
