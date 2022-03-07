@@ -30,7 +30,7 @@ body{
     
   
     z-index: 10;
-    border: 1px solid red;
+    /*border: 1px solid red; */
    
 
 }
@@ -211,7 +211,7 @@ body {
 .headIcons {
     margin-top: 3%;
     width: 88%;
-    margin-left: 2%;
+    margin-left: 4%;
     height: 200px;
   /*  border: 1px solid whitesmoke; */
     display: grid;
@@ -282,10 +282,10 @@ body {
 
 
   #productDiv {
-    border: 1px solid greenyellow;
+   /* border: 1px solid greenyellow; */
     width: 90%;
 
-    margin-left: 2%;
+    margin-left: 4%;
     display: grid;
     grid-template-columns: 24% 24% 24% 24%;
     gap: 2px;
@@ -297,6 +297,9 @@ body {
     width: 95%;
 
     /* border: 1px solid blue; 8*/
+}
+.imgCard:hover{
+   
 }
 
 .picIcon {
