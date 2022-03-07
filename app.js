@@ -57,12 +57,87 @@ function viewProducts(datas) {
 
 
 
-//----------------------------------------------------------------------------- search debouncing
+let bunny = document.getElementById("bunny");
+let imgur13 = document.getElementById("imgur13");
+let vintage = document.getElementById("vintage");
+let pokemon  = document.getElementById("pokemon");
+let history  = document.getElementById("history");
+let science = document.getElementById("science");
+let  popular = document.getElementById("popular");
+let gaming  = document.getElementById("gaming");
+let memes = document.getElementById("memes");
+
+
+bunny.onclick = () => {
+    
+    let x = "bunny";
+    showResultData(x);
+}
+
+imgur13.onclick = () => {
+    
+    let x = "imgur";
+    showResultData(x);
+}
+
+vintage.onclick = () => {
+    
+    let x = "vintage";
+    showResultData(x);
+}
+
+
+pokemon.onclick = () => {
+    
+    let x = "pokemon";
+    showResultData(x);
+}
+
+
+history.onclick = () => {
+    
+    let x = "history";
+    showResultData(x);
+}
+
+
+science.onclick = () => {
+    
+    let x = "science";
+    showResultData(x);
+}
+
+
+popular.onclick = () => {
+    
+    let x = "popular";
+    showResultData(x);
+}
+
+gaming.onclick = () => {
+    
+    let x = "gaming";
+    showResultData(x);
+}
+
+memes.onclick = () => {
+    
+    let x = "memes";
+    showResultData(x);
+}
+
+
+
+
+
+//-------------------------------------------------------- search & debouncing
 
 
 
 let inputData = document.getElementById("takeinput");
 let dropDown = document.getElementById("searchresult");
+
+
 let timerId;
 
 
