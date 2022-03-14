@@ -93,6 +93,10 @@ body {
 
 }
 
+.lefttextValue{
+    margin-left: 1%;
+}
+
 .inpstyle {
     width: 650px;
     padding: 2%;
