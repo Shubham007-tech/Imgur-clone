@@ -1,1 +1,1 @@
-This is just simple js project
+This is just simple js project with html and css
