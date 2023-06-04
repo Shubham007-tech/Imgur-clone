@@ -212,16 +212,16 @@ body {
 
 }
 
-.headIcons {
-    margin-top: 3%;
-    width: 88%;
-    margin-left: 4%;
-    height: 200px;
-  /*  border: 1px solid whitesmoke; */
-    display: grid;
-    grid-template-columns: 15% 10.5% 10.5% 10.5% 10.5% 10.5% 10.5% 10.5% 10.5%;
 
+
+.headIcons {
+  margin: 3% 4% 0;
+  width: 88%;
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(9, 10.5%);
 }
+
 
 .headIcons>div {
     margin-top: 4%;
